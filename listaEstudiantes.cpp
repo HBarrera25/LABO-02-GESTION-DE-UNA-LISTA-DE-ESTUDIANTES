@@ -54,7 +54,7 @@ class listaEnlazada {  // Lista enlazada de Estudiantes
     }
 
     // Imprimir lista
-    void imprimi    rLista() {
+    void imprimirLista() {
         Estudiante* temp = head;
         cout << "\n--- Lista de Estudiantes ---\n";
         while (temp != nullptr) {
