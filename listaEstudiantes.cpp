@@ -74,3 +74,9 @@ class listaEnlazada {  // Lista enlazada de Estudiantes
         return suma / contador;
     }
 };
+int main() {
+    ListaEnlazada lista;
+
+    lista.agregarEstudiante("Joaquin", 8.5);
+    lista.agregarEstudiante("Matias", 7.8);
+    lista.agregarEstudiante("El pepe", 9.2);
