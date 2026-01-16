@@ -34,7 +34,43 @@ class listaEnlazada {  // Lista enlazada de Estudiantes
         }
 
 };
-    public:
+    {
+        public:
         listaEnlazada() {
             head = nullptr;
         }
+        void agregarEstudiante(string nombre, float nota) {
+        Estudiante* nuevo = new Estudiante(nombre, nota);
+
+        if (head == nullptr) {
+            head = nuevo;
+        } else {
+            Estudiante* temp = head;
+            while (temp->siguiente != nullptr) {
+                temp = temp->siguiente;
+            }
+            temp->siguiente = nuevo;
+        }
+    }
+
+    // Imprimir lista
+    void imprimi    rLista() {
+        Estudiante* temp = head;
+        cout << "\n--- Lista de Estudiantes ---\n";
+        while (temp != nullptr) {
+            temp->imprimir();
+            temp = temp->siguiente;
+        }
+    }
+
+    // Calcular promedio usando recursividad
+    float calcularPromedioRecursivo() {
+        int contador = 0;
+        float suma = sumaNotasRecursiva(head, contador);
+
+        if (contador == 0) {
+            return 0;
+        }
+        return suma / contador;
+    }
+};
