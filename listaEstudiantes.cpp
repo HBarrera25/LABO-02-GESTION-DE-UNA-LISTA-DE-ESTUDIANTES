@@ -19,3 +19,22 @@ class Estudiante {
         cout << "Nombre del Estudiante:" << nombre << " | Nota Final: " << notaFinal << endl;
     }
 };
+
+class listaEnlazada {
+    private:
+        Estudiante* head;
+
+        float sumaNotasRecursiva(Estudiante* actual, int& contador){
+            if(actual == nullptr){
+                return 0;
+            }
+            contador++;
+            return actual->notaFinal + sumaNotasRecursiva(actual->siguiente, contador);
+        
+        }
+
+};
+    public:
+        listaEnlazada() {
+            head = nullptr;
+        }
