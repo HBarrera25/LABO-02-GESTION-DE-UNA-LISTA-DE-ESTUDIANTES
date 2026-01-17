@@ -3,13 +3,13 @@
 
 using namespace std;
 
-class Estudiante {
+class Estudiante {   
     public:
         string nombre;
         float notaFinal;
         Estudiante* siguiente;
 
-    Estudiante(string nom, float nota) {
+    Estudiante(string nom, float nota) {  //Constructor
         nombre = nom;
         notaFinal = nota;
         siguiente = nullptr;
@@ -20,7 +20,7 @@ class Estudiante {
     }
 };
 
-class listaEnlazada {
+class listaEnlazada {  // Lista enlazada de Estudiantes
     private:
         Estudiante* head;
 
