@@ -30,12 +30,9 @@ class listaEnlazada {  // Lista enlazada de Estudiantes
             }
             contador++;
             return actual->notaFinal + sumaNotasRecursiva(actual->siguiente, contador);
-        
         }
 
-};
-    {
-        public:
+    public:
         listaEnlazada() {
             head = nullptr;
         }
@@ -75,10 +72,16 @@ class listaEnlazada {  // Lista enlazada de Estudiantes
     }
 };
 int main() {
-    ListaEnlazada lista;
+    listaEnlazada lista;
 
     lista.agregarEstudiante("Joaquin", 8.5);
     lista.agregarEstudiante("Matias", 7.8);
     lista.agregarEstudiante("El pepe", 9.2);
 
-    lista.imprimirLista
+    lista.imprimirLista();
+    
+    float promedio = lista.calcularPromedioRecursivo();
+    cout << "Promedio de notas: " << promedio << endl;
+    return 0;
+
+}
