@@ -20,7 +20,7 @@ class Estudiante {
     }
 };
 
-class listaEnlazada {  // Lista enlazada de Estudiantes
+class ListaEnlazada {  // Lista enlazada de Estudiantes
     private:
         Estudiante* head;
 
@@ -72,7 +72,7 @@ class listaEnlazada {  // Lista enlazada de Estudiantes
     }
 };
 int main() {
-    listaEnlazada lista;
+    ListaEnlazada lista;
 
     lista.agregarEstudiante("Joaquin", 8.5);
     lista.agregarEstudiante("Matias", 7.8);
